@@ -77,3 +77,11 @@
  print "".join(nums)
  ```
  
+ * Note:
+ 
+ ```python
+ foobar = '%s%s' % (foo, bar) # It is OK
+ foobar = '{0}{1}'.format(foo, bar) # It is better
+ foobar = '{foo}{bar}'.format(foo=foo, bar=bar) # It is best
+ ```
+ 
