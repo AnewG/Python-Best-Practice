@@ -85,3 +85,20 @@
  foobar = '{foo}{bar}'.format(foo=foo, bar=bar) # It is best
  ```
  
+### Explicit code
+
+ * Bad
+
+ ```python
+ def make_complex(*args):
+   x, y = args
+   return dict(**locals()) # local variable
+ ```
+ 
+ * Good
+
+ ```python
+ def make_complex(x, y):
+   return {'x': x, 'y': y}
+ ```
+ 
