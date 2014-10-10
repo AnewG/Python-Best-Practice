@@ -46,3 +46,34 @@
    # Do something
  # bar() is decorated auto
  ```
+
+### Create a concatenated string
+
+ * Bad
+
+ ```python
+ # create a concatenated string from 0 to 19 (e.g. "012..1819")
+ nums = ""
+ for n in range(20):
+  nums += str(n)   # slow and inefficient , because string is immutable types
+ print nums
+ ```
+ 
+ * Good
+
+ ```python
+ # create a concatenated string from 0 to 19 (e.g. "012..1819")
+ nums = []
+ for n in range(20):
+  nums.append(str(n))
+ print "".join(nums)  # much more efficient
+ ```
+ 
+ * Best
+
+ ```python
+ # create a concatenated string from 0 to 19 (e.g. "012..1819")
+ nums = [str(n) for n in range(20)] # more beauty
+ print "".join(nums)
+ ```
+ 
