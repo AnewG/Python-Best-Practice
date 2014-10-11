@@ -102,3 +102,25 @@
    return {'x': x, 'y': y}
  ```
  
+### Unpacking
+
+ ```python
+ for index, item in enumerate(some_list):
+   # do something with index and item
+ ```
+ 
+ * In Py3
+ 
+ ```python
+ a, *rest = [1, 2, 3]
+ # a = 1, rest = [2, 3]
+ a, *middle, c = [1, 2, 3, 4]
+ # a = 1, middle = [2, 3], c = 4
+ ```
+ 
+ * Create an ignored variable
+ 
+ ```python
+ filename = 'foobar.txt'
+ basename, __, ext = filename.rpartition('.')
+ ```
