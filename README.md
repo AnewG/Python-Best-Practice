@@ -1,6 +1,6 @@
 # Python Best Practice
 
----------
+---
 
 easy_insall & pip like composer in php
 
