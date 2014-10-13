@@ -343,3 +343,5 @@ from operator import mul
 def create_multipliers():
     return [partial(mul, i) for i in range(5)]
 ```
+
+http://docs.python-guide.org/en/latest/
