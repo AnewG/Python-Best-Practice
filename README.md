@@ -201,3 +201,66 @@ easy_insall & pip like composer in php
  b = filter(lambda x: x > 4, a)
  # (lambda x: x*2)(3) 参数:语句(调用参数)
  ```
+
+ * Bad
+ 
+ ```python
+ # Add three to all list members.
+ a = [3, 4, 5]
+ for i in range(len(a)):
+   a[i] += 3
+ ```
+ 
+ * Good
+ 
+ ```python
+ a = [3, 4, 5]
+ a = [i + 3 for i in a]
+ # Or:
+ a = map(lambda i: i + 3, a)
+ ```
+ 
+### Read From a File
+
+ * Bad
+ 
+ ```python
+ f = open('file.txt')
+ a = f.read()
+ print a
+ f.close()
+ ```
+ 
+ * Good
+ 
+ ```python
+ with open('file.txt') as f:
+   for line in f:
+     print line
+ ```
+ 
+### Line Continuations
+
+ * Bad
+ 
+ ```python
+ my_very_big_string = """For a long time I used to go to bed early. Sometimes, \
+   when I had put out my candle, my eyes would close so quickly that I had not even \
+   time to say “I’m going to sleep.”"""
+
+ from some.deep.module.inside.a.module import a_nice_function, another_nice_function, \
+   yet_another_nice_function
+ ```
+ 
+ * Good
+ 
+ ```python
+ my_very_big_string = (
+   "For a long time I used to go to bed early. Sometimes, "
+   "when I had put out my candle, my eyes would close so quickly "
+   "that I had not even time to say “I’m going to sleep.”"
+ )
+
+ from some.deep.module.inside.a.module import (
+   a_nice_function, another_nice_function, yet_another_nice_function)
+ ```
