@@ -178,3 +178,26 @@ easy_insall & pip like composer in php
  if 'hello' in d:
    print d['hello']
  ```
+
+### Short Ways to Manipulate Lists
+
+ * Bad
+ 
+ ```python
+ # Filter elements greater than 4
+ a = [3, 4, 5]
+ b = []
+ for i in a:
+   if i > 4:
+     b.append(i)
+ ```
+ 
+ * Good
+ 
+ ```python
+ a = [3, 4, 5]
+ b = [i for i in a if i > 4]
+ # Or:
+ b = filter(lambda x: x > 4, a)
+ # (lambda x: x*2)(3) 参数:语句(调用参数)
+ ```
