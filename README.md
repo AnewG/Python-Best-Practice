@@ -126,3 +126,30 @@ easy_insall & pip like composer in php
  filename = 'foobar.txt'
  basename, __, ext = filename.rpartition('.')
  ```
+
+### Check if variable equals a constant
+
+ * Bad
+ 
+ ```python
+ if attr == True:
+   print 'True!'
+
+ if attr == None:
+   print 'attr is None!'
+ ```
+ * Good
+ 
+ ```python
+ # Just check the value
+ if attr:
+   print 'attr is truthy!'
+
+ # or check for the opposite
+ if not attr:
+   print 'attr is falsey!'
+
+ # or, since None is considered false, explicitly check for it
+ if attr is None:
+   print 'attr is None!'
+ ```
