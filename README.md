@@ -264,3 +264,34 @@ easy_insall & pip like composer in php
  from some.deep.module.inside.a.module import (
    a_nice_function, another_nice_function, yet_another_nice_function)
  ```
+
+---
+
+## Common Gotchas
+
+What You Wrote
+
+```python
+def append_to(element, to=[]):
+  to.append(element)
+  return to
+```
+
+What You Might Have Expected to Happen
+
+```python
+my_list = append_to(12)
+print my_list # [12]
+
+my_other_list = append_to(42)
+print my_other_list # [42]
+```
+
+What Does Happen
+
+```python
+# [12]
+# [12,42]
+```
+
+Because:Python’s default arguments are evaluated once when the function is defined, not each time the function is called (like it is in say, Ruby). This means that if you use a mutable default argument and mutate it, you will and have mutated that object for all future calls to the function as well.
