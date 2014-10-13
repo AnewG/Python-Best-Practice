@@ -344,4 +344,12 @@ def create_multipliers():
     return [partial(mul, i) for i in range(5)]
 ```
 
+pip install pep8
+
+pip install requests
+
+pip install Pillow
+
+[Environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+
 http://docs.python-guide.org/en/latest/
