@@ -305,3 +305,41 @@ def append_to(element, to=None):
   to.append(element)
   return to
 ```
+
+What You Wrote
+
+```python
+def create_multipliers():
+  return [lambda x : i * x for i in range(5)]
+```
+
+What You Might Have Expected to Happen
+
+```python
+for multiplier in create_multipliers():
+  print multiplier(2)
+# 0 2 4 6 8
+```
+
+What Does Happen
+
+```python
+# 8 8 8 8 8
+```
+
+Because Python’s closures are late binding. This means that the values of variables used in closures are looked up at the time the inner function is called.Here, whenever any of the returned functions are called, the value of i is looked up in the surrounding scope at call time
+
+What You Should Do Instead
+
+```python
+def create_multipliers():
+  return [lambda x, i=i : i * x for i in range(5)]
+    
+# Or
+
+from functools import partial
+from operator import mul
+
+def create_multipliers():
+    return [partial(mul, i) for i in range(5)]
+```
