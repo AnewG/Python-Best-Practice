@@ -1,27 +1,33 @@
-# Python Best Practice
+## Python Best Practice
 
----
+
+### global
 
 ```python
+# UTF-8 Encoding:
 # -*- coding: utf-8 -*-
 
-key word:
-and       del       from      not       while
-as        elif      global    or        with
-assert    else      if        pass      yield
-break     except    import    print
-class     exec      in        raise
-continue  finally   is        return
-def       for       lambda    try
+# key word:
 
-_* :
-useless for `from module import *`
+# and       del       from      not       while
+# as        elif      global    or        with
+# assert    else      if        pass      yield
+# break     except    import    print
+# class     exec      in        raise
+# continue  finally   is        return
+# def       for       lambda    try
 
-__*__ :
-System use
+# _* :
+# useless for `from module import *`
 
-__* :
-Class private variable
+# __*__ :
+# System use
+
+# __* :
+# Class private variable
+
+# new-style class A(object): Breadth-First-Search
+# old-style class A: Depth-First-Search
 ```
 
 easy_insall & pip like composer in php
