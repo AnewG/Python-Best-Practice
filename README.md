@@ -2,6 +2,28 @@
 
 ---
 
+```python
+# -*- coding: utf-8 -*-
+
+key word:
+and       del       from      not       while
+as        elif      global    or        with
+assert    else      if        pass      yield
+break     except    import    print
+class     exec      in        raise
+continue  finally   is        return
+def       for       lambda    try
+
+_* :
+不会被from module import *导入。_这个特殊的标识符用于在交互式解释器中存储上一次计算的结果；它存储在__builtin__模块。不在交互式模式时，_没有特别的含义且是未定义的。
+
+__*__ :
+系统定义的名字。这些名字由解释器及其实现（包括标准库）定义。当前的系统名字在特殊方法的名字一节和其它地方讨论。未来版本的Python 可能会定义更多的系统名字。无论什么情况，任何不遵守明确的文档使用说明的__*__使用，都会带来破坏而没有警告。
+
+__* :
+类私有变量。这种类别的名字，在类定义的语境中使用时，会被使用一种变形的形式重写以避免基类和继承类“私有”属性的冲突。
+```
+
 easy_insall & pip like composer in php
 
 ### Module
