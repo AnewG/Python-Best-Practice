@@ -6,6 +6,9 @@
 ```python
 # UTF-8 Encoding:
 # -*- coding: utf-8 -*-
+# utf8 is one implement of unicode
+# str1.decode('gb2312') str1(gb2312) to unicode(commmon)
+# str2.encode('gb2312') str2(unicode(common)) to gb2312
 
 # key word:
 
