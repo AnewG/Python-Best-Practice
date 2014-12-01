@@ -43,6 +43,8 @@ global is writeable
 
 easy_insall & pip like composer in php
 
+### Unicode
+
 ### Module
 
  * Very bad
