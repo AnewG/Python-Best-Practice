@@ -33,6 +33,14 @@
 # old-style class A: Depth-First-Search
 ```
 
+### Scope
+
+```
+local -> module -> built-in
+local is read-only , when you access it , it will return a copy
+global is writeable
+```
+
 easy_insall & pip like composer in php
 
 ### Module
