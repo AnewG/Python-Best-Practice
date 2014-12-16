@@ -1,3 +1,9 @@
+Different with php:
+
+```
+1.Python的作用域规则是，变量的创建总会创建一个新的local变量，但是变量的访问（包括修改）会先查找local作用域然后顺着最邻近的作用域去寻找匹配。
+```
+
 ## Python Best Practice
 
 
