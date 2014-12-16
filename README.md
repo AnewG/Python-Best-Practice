@@ -412,3 +412,5 @@ pip install Pillow
 [Environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
 http://docs.python-guide.org/en/latest/
+
+http://harveyqing.gitbooks.io/python-read-and-write/content/1_python/12.html
