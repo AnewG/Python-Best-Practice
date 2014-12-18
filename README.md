@@ -2,6 +2,17 @@ Different with php:
 
 ```
 1.Python的作用域规则是，变量的创建总会创建一个新的local变量，但是变量的访问（包括修改）会先查找local作用域然后顺着最邻近的作用域去寻找匹配。全局变量可以被访问到（如果是可变类型，其甚至可以被改变），但是（默认情况下）不能被赋值。
+
+2.
+class Person:
+    '''class variable'''
+    population = 0
+
+    def __init__(self, name):
+        '''object variable'''
+        self.name = name
+        '''class variable'''
+        Person.population += 1
 ```
 
 ## Python Best Practice
